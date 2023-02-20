@@ -1,0 +1,14 @@
+def yasHesapla(dogumYili):
+  return 2023-dogumYili
+  
+def EmekliligeKacYilKaldi(dogumYili):
+  yas = yasHesapla(dogumYili)
+  emeklilik = 65 - yas
+  
+  if emeklilik>0:
+    print(f'Emekliliğe {emeklilik} yıl kaldı')
+  else:
+    print("Zaten emeklisiniz.")
+    
+    
+EmekliligeKacYilKaldi(1997)
