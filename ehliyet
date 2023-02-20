@@ -1,0 +1,11 @@
+isim = input("isminiz : ")
+yas = int(input(" yaşınız: "))
+egitim = input("eğitiminiz: ")
+
+if(yas>=18):
+  if(egitim=='lise' or egitim=='üniversite'):
+    print(f'{isim} ehliyet alabilirsiniz.')
+   else:
+    print(f'{isim} ehliyet alamazsınız eğitim durumunuz yetersiz.')
+ else:
+  print(f'{isim} ehliyet alamazsınız yaşınız 18den küçük.')
