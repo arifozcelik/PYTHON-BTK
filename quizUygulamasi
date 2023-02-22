@@ -1,14 +1,17 @@
 #QUESTION
+
+#QUESTION SINIFI
 class Question():
   def __init__(self,text,choices,answer):
     self.text=text
     self.choices=choices
     self.answer=answer
     
+  #CEVAPLARIN DOĞRULANMASI
   def checkAnswer(self,answer):
     return self.answer == answer
     
-
+#QUIZ SINIFI
 #QUIZ
 class Quiz():
   
