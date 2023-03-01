@@ -24,3 +24,5 @@ try:
   check_password(psw)
 except Exception as ex:
   print(ex)
+finally:
+  print("validation tamamlandı.")
