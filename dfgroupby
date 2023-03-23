@@ -1,0 +1,37 @@
+#GROUPBY
+
+import pandas as pd
+
+personeller = {
+  'Çalışan':['Ahmet Yılmaz','Can Ertürk','Hasan Korkmaz','Cenk Saymaz','Ali Korkmaz','Arif Özçelik','Serap Türk'],
+  'Departman':['İK','BT','Muhasebe','İK','BT','Eng','Eng'],
+  'Yaş':[30,25,45,50,23,34,42],
+  'Semt':['Kadıköy','Kızılay','Eyüp','Tuzla','Maltepe','Tuzla','Kadıköy'],
+  'Maaş':[5000,3000,4000,3000,4000,5000,6000]
+}
+
+df = pd.dataFrame(personeller)
+
+result = df
+result = df["Maaş"].sum()
+result = df.groupby("Departman").groups
+result = df.groupby(["Deparman","Semt"]).groups
+
+semtler = df.groupby("Semt")
+for name,group in semtler:
+  print(name)
+  print(group)
+  
+for name,group in df.groupby("Departman"):
+  print(name)
+  print(group)
+  
+result = df.groupby("Semtler").get_group("Kadıköy")
+result = df.groupby("Departman").get_group("Muhasebe")
+result = df.groupby("Departman").sum()
+result = df.groupby("Departman").mean()
+result = df.groupby("Departman")["Maaş"].mean()
+result = df.groupby("Semt")["Çalışan"].count()
+
+
+print(result)
